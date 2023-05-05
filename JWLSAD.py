@@ -1,35 +1,60 @@
 import random
-def D2():
-    Roll = random.randint(1,2)
-    print(Roll)
-def D3():
-    Roll = random.randint(1,3)
-    print(Roll)
-def D4():
-    Roll = random.randint(1,4)
-    print(Roll)
-def D5():
-    Roll = random.randint(1,5)
-    print(Roll)
-def D6():
-    Roll = random.randint(1,6)
-    print(Roll)
-def D7():
-    Roll = random.randint(1,7)
-    print(Roll)
-def D8():
-    Roll = random.randint(1,8)
-    print(Roll)
-def D9():
-    Roll = random.randint(1,9)
-    print(Roll)
-def D10():
-    Roll = random.randint(1,10)
-    print(Roll)
-def D11():
-    Roll = random.randint(1,11)
-    print(Roll)
-def D12():
-    Roll = random.randint(1,12)
-    print(Roll)
-D12()
+def Dice_roll():
+    Max = int(input("What would you like to roll out of?\n"))
+    Number_of_dice = int(input("How many dice would you like to roll?\n"))
+    i = 1
+    while i <= Number_of_dice:
+        Roll = random.randint(1, Max)
+        print(Roll)
+        i += 1
+Dice_roll()
+
+class Player:
+    def __init__(self, name, level, attack, intelligence, battle_intelligence, max_health, defense, speed, accuracy, stealth, action_number, bonus_action_number, max_encumbrance,):
+        self.name = name
+        self.level = level
+        self.attack = attack
+        self.intelligence = intelligence
+        self.battle_intelligence = battle_intelligence
+        self.max_health = max_health
+        self.health = max_health
+        self.defense = defense
+        self.speed = speed
+        self.accuracy = accuracy
+        self.stealth = stealth
+        self.action_number = action_number
+        self.bonus_action_number = bonus_action_number
+        self.max_encumbrance = max_encumbrance
+        self.max_encumbrance = 0
+        self.inventory = []
+        self.weapons = []
+        self.armor = []
+        self.moves = []
+        self.skills = []
+        self.relations = {}
+    
+    def new_item(item):
+        self.inventory.append(item)
+    
+    def new_weapon(weapon):
+        self.inventory.append(weapon)
+
+    def new_armor(armor):
+        self.inventory.append(armor)
+    
+    def __str__(self):
+        return f""        
+
+class Ranger(Player):
+    pass
+class Warrior(Player):
+    pass
+
+class item:
+    pass
+    
+class weapon:
+    pass
+
+class armor:
+    pass
