@@ -1,4 +1,4 @@
 # Personal_python_projects
 Python projects I made in my own time without tutorials.
 
-I made these programs out of my own creativity with some help from google resources on how to use specfic commands. They are not all complete yet but will be soon.
+A Repository of python projects made on my own without the help of a tutorial. Some of these projects are complete but many are a work in progress and i will continue to put files in here as i start working on them
