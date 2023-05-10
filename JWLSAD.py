@@ -37,13 +37,13 @@ class Player:
         self.inventory.append(item)
     
     def new_weapon(weapon):
-        self.inventory.append(weapon)
+        self.weapons.append(weapon)
 
     def new_armor(armor):
-        self.inventory.append(armor)
+        self.armor.append(armor)
     
     def __str__(self):
-        return f""        
+        return f"A {self.level} level player named {self.name}, with {self.health} health."        
 
 class Ranger(Player):
     pass
