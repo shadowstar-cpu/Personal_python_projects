@@ -32,6 +32,7 @@ class Player:
         self.moves = []
         self.skills = []
         self.relations = {}
+        self.init_attacks()
     
     def new_item(item):
         self.inventory.append(item)
