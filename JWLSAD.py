@@ -28,6 +28,7 @@ class Player:
         self.max_encumbrance = 0
         self.inventory = []
         self.weapons = []
+        self.attack_type = self.weapons[0].damage_type
         self.armor = []
         self.moves = []
         self.skills = []
@@ -42,13 +43,17 @@ class Player:
 
     def new_armor(armor):
         self.armor.append(armor)
+        
+    def entity_name():
+        return self.name
+    
+    def moves():
+        return self.moves
     
     def __str__(self):
         return f"A {self.level} level player named {self.name}, with {self.health} health."        
 
-class Ranger(Player):
-    pass
-class Warrior(Player):
+class Tutorial_Player(Player):
     pass
 
 class item:
