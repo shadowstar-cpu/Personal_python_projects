@@ -35,26 +35,31 @@ class Player:
         self.relations = {}
         self.init_attacks()
     
-    def new_item(item):
+    def new_item(self, item):
         self.inventory.append(item)
     
-    def new_weapon(weapon):
+    def new_weapon(self, weapon):
         self.weapons.append(weapon)
 
-    def new_armor(armor):
+    def new_armor(self, armor):
         self.armor.append(armor)
         
-    def entity_name():
+    def entity_name(self):
         return self.name
     
-    def moves():
+    def moves(self):
         return self.moves
+    
+    def damaged(self, damage):
+        self.health = max(self.health - damage, 0)
+        print(f"{damage} damage done to {self.entity_name()}")
     
     def __str__(self):
         return f"A {self.level} level player named {self.name}, with {self.health} health."        
 
 class Tutorial_Player(Player):
-    pass
+    def init_attacks(self):
+        self.attacks = []
 
 class item:
     pass
@@ -63,4 +68,7 @@ class weapon:
     pass
 
 class armor:
+    pass
+
+class move:
     pass
