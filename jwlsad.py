@@ -73,13 +73,11 @@ class TutorialPlayer(Player):
 
     def init_attacks(self):
         '''initilizes attacks'''
-        self.attacks = []
-
-shadow = TutorialPlayer('Shadow', 20, 50, 50, 50, 300, 50, 50, 50, 50, 5, 10, 10000)
-print(shadow)
+        self.attacks = [strike]
 
 class Item:
     '''class for items'''
+
 
 class Weapon:
     '''class for weapons'''
@@ -89,3 +87,23 @@ class Armor:
 
 class Move:
     '''class for moves'''
+    def __init__(self, name, power, accuracy):
+        self.name = name
+        self.power_percent = power
+        self.accuracy = accuracy
+
+    def __str__(self):
+        return(f'{self.name} with {self.power_percent}% of attack power'
+               f' and {self.accuracy}% chance to hit.')
+
+    def calculate_damage(self, attack_power):
+        '''calculates the damage done'''
+        if random.randint(1, 100) <= self.accuracy:
+            max_damage = round(attack_power * self.power_percent / 100)
+            return random.randint(1, max_damage)
+        return 0
+strike = Move('Strike', 100, 50)
+print(strike)
+shadow = TutorialPlayer('Shadow', 20, 50, 50, 50, 300, 50, 50, 50, 50, 5, 10, 10000)
+print(shadow)
+print(shadow.moves)
