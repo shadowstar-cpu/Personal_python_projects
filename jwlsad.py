@@ -6,11 +6,15 @@ def dice_roll():
     maxnumber = int(input("What would you like to roll out of?\n"))
     number_of_dice = int(input("How many dice would you like to roll?\n"))
     i = 1
+    rolls = []
     while i <= number_of_dice:
-        rolls = []
         rolls.append(random.randint(1, maxnumber))
         i += 1
-dice_roll()
+    i = 0
+    while i < len(rolls):
+        print(rolls[i])
+        i += 1
+#dice_roll()
 
 class Player:
     '''the superclass for all player type entities'''
@@ -51,13 +55,17 @@ class Player:
         '''a method to add armor to the players equipped armor'''
         self.armor.append(armor)
 
+    def new_move(self, move):
+        '''a method to add moves to the players movelist'''
+        self.movelist.append(move)
+
     def entity_name(self):
         '''returns the name of the entity'''
         return self.name
 
     def moves(self):
-        '''returns a list moves of the player'''
-        return self.moves
+        '''returns a list of moves of the player'''
+        return self.movelist
 
     def damaged(self, damage):
         '''subtracts the damage from the players health or sets it to zero if the damage would
@@ -66,14 +74,14 @@ class Player:
         print(f"{damage} damage done to {self.entity_name()}")
 
     def __str__(self):
-        return f"A {self.level} level player named {self.name}, with {self.health} health."
+        return f"A {self.level} level player named {self.name}, with {self.health} health, and {self.moves} moves"
 
 class TutorialPlayer(Player):
     '''a tutorial player'''
 
     def init_attacks(self):
         '''initilizes attacks'''
-        self.attacks = [strike]
+        self.movelist = [Move('Strike', 100, 50)]
 
 class Item:
     '''class for items'''
@@ -93,7 +101,7 @@ class Move:
         self.accuracy = accuracy
 
     def __str__(self):
-        return(f'{self.name} with {self.power_percent}% of attack power'
+        return(f'A move named {self.name} with {self.power_percent}% of attack power'
                f' and {self.accuracy}% chance to hit.')
 
     def calculate_damage(self, attack_power):
@@ -102,8 +110,6 @@ class Move:
             max_damage = round(attack_power * self.power_percent / 100)
             return random.randint(1, max_damage)
         return 0
-strike = Move('Strike', 100, 50)
-print(strike)
 shadow = TutorialPlayer('Shadow', 20, 50, 50, 50, 300, 50, 50, 50, 50, 5, 10, 10000)
 print(shadow)
-print(shadow.moves)
+print(f"shadow's moves {shadow.moves}")
