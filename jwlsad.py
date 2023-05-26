@@ -74,7 +74,7 @@ class Player:
         print(f"{damage} damage done to {self.entity_name()}")
 
     def __str__(self):
-        return f"A {self.level} level player named {self.name}, with {self.health} health, and {self.moves} moves"
+        return f"A {self.level} level player named {self.name}, with {self.health} health"
 
 class TutorialPlayer(Player):
     '''a tutorial player'''
