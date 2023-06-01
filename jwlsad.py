@@ -59,14 +59,6 @@ class Player:
         '''a method to add moves to the players movelist'''
         self.movelist.append(move)
 
-    def entity_name(self):
-        '''returns the name of the entity'''
-        return self.name
-
-    def moves(self):
-        '''returns a list of moves of the player'''
-        return self.movelist
-
     def damaged(self, damage):
         '''subtracts the damage from the players health or sets it to zero if the damage would
         put it below zero'''
@@ -111,5 +103,3 @@ class Move:
             return random.randint(1, max_damage)
         return 0
 shadow = TutorialPlayer('Shadow', 20, 50, 50, 50, 300, 50, 50, 50, 50, 5, 10, 10000)
-print(shadow)
-print(f"shadow's moves {shadow.moves}")
