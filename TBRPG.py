@@ -134,7 +134,7 @@ def run():
             shadow.speed =+ 1
             print('You run circles around the cell, you make many circles because its not very big but after a while you begin to sweat, you can feel your heart rate speeding up. you run until youre severly out of breath. you stop and rest in front of the screen and the screen responds "Taking vitals... You are stable prisoner, It is time to select your new lifeform.')
         reset_choice()
-        print("lets start with your species. I can put you into a custom body of any race you would like using my controlled mutation procedures. you will be put under anesthesia for this procedure. The races you can choose from are as follows:\nHuman - The jack of all trades, medium-low in all categories, but they have a tendency to succeed where they shouldn't.\nLhugan - A race of high endurance, medium strength, low speed, and low intelligence. They often have bad things befall them.\nCarchor -")
+        print("lets start with your species. I can put you into a custom body of any race you would like using my controlled mutation procedures. you will be put under anesthesia for this procedure. The races you can choose from are as follows:\nHuman - The jack of all trades, medium-low in all categories, but they have a tendency to succeed where they shouldn't.\nLhugan - A reptilian race of high endurance, medium strength, low speed, and low intelligence. They are able to run in 4 legs for a short distance at great speed, but are often very unlucky. \nCarchor - A feline race that resemble humans in bone structure, and shape,they are covered in fur from head to toe and have large ears and a tail. they have a high speed medium high intelligence, medium endurance, and a low strength,but they're claws make excellent weapons and they can seen well in the dark. \nSaela - ")
         race = (input(''))
 
 run()
@@ -144,7 +144,7 @@ continue the story, add a punch the screen option for the lolz, decide different
 species
 speed-SP intelligence-I strength-St endurance- E luck-L
 1-low 2-medium-low 3-medium 4- medium-high 5-high
-Human - metro politan species medium-low SpIStE high L, Lhugan - reptilian race that is built to stand on 2 legs but can run on four possible ability for extra speed low I  medium Sp medium St high E low L, Carchor - Feline species, especially similar to humans in bone structure, can not run on 4 legs, medium-high I high Sp low St medium E medium L, Saela - s very humanlike species, some say they have magical powers, taller than humans, pointed ear lobes(bottom) high I medium Sp low St low E low L, Nornonion - low I  low Sp High S medium E low L 
+Human - metro politan species medium-low SpIStE high L, Lhugan - reptilian race that is built to stand on 2 legs but can run on four possible ability for extra speed low I  medium Sp medium St high E low L, Carchor - Feline species, especially similar to humans in bone structure, can not run on 4 legs, medium-high I high Sp low St medium E medium L,sees in dark, claws Saela - s very humanlike species, some say they have magical powers, taller than humans, pointed ear lobes(bottom) high I medium Sp low St low E low L, Nornonion - low I  low Sp High S medium E low L 
 :
 insanity
 great - I buff E buff, good small I buff, okay none, bad random song lyrics small I debuff, insane communist manifesto random song lyrics I debuff E debuff
